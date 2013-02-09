@@ -1,9 +1,5 @@
 <?php
-	class mp3scraper 
+	class mp3scraper
 	{
-
-		public function __construct()
-		{
-
-		}
+		
 	}
