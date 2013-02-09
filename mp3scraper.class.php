@@ -1,6 +1,6 @@
 <?php
 class mp3scraper
-{
+{ 
 	var $url;
 	var $urlcontent;
 	var $downloadlinks = array();
