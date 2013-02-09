@@ -35,8 +35,8 @@
 		if (!file_exists($out))
 		{
 			echo "Downloading file: " . $url . "\n\r";
-			$data = get_data($url);
-			file_put_contents($out, $data);
+			// $data = get_data($url);
+			// file_put_contents($out, $data);
 			echo "Saved to: " . $out . "\n\r";
 		} else 
 		{
