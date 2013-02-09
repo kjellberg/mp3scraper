@@ -6,10 +6,15 @@
 		var $regexp;
 		var $directory;
 		var $downloadlinks = array();
+		var $rootdir = 'downloads/';
 
-		public function __construct( $directory = 'random', $url = false )
+		public function __construct( $url = false )
 		{
 			$this->directory = $directory;
+
+
+			if (!is_dir('downloads'))
+				mkdir('downloads');
 
 			if ( empty( $url ) )
 				die("Usage: mp3scrape(\$directory = 'random', \$url = false) \n");
@@ -27,4 +32,22 @@
 			
 			return $downloadlinks;
 		}
+
+		public function directory ( $dir )
+		{
+			$this->directory = $dir;
+			if (!is_dir($this->rootdir . $this->directory))
+				mkdir($this->rootdir . $this->directory);
+		}
+
+		public function download ( )
+		{
+			
+
+			echo "aa \n";
+		}
 	}
+
+
+
+
