@@ -4,12 +4,14 @@ class mp3scraper
 	var $url;
 	var $urlcontent;
 	var $downloadlinks = array();
-
+	var $inc;
 	var $regexp = 'href=\"http:\/\/(.*)\.mp3';
 	var $directory = 'downloads/';
 
 	public function __construct( $url = false )
 	{
+
+		$this->inc = 0;
 
 		if (!is_dir('downloads'))
 			mkdir('downloads');
@@ -63,6 +65,11 @@ class mp3scraper
 			}
 
 		endforeach;
+
+		if ($this->inc == 0)
+			echo "No new songs to download. \n";
+		else
+			echo "Downloaded $this->inc files \n";
 	}
 
 	public function get_file_by_curl ($url)
@@ -72,12 +79,13 @@ class mp3scraper
 
 		curl_setopt( $ch, CURLOPT_URL, $url );
 		curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
-		curl_setopt( $ch, CURLOPT_CONNECTTIMEOUT, $timeout );
+		curl_setopt( $ch, CURLOPT_CONNECTTIMEOUT, $timeout 	);
 
 		$data = curl_exec( $ch );
 
 		curl_close($ch);
 
+		$this->inc++;
 		return $data;
 	}
 
