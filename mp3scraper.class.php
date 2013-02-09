@@ -70,11 +70,11 @@ class mp3scraper
 		$ch = curl_init() or die("ERROR|<b>Error:</b> cURL Error");
 		$timeout = 5;
 
-		curl_setopt($ch, CURLOPT_URL, $url);
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+		curl_setopt( $ch, CURLOPT_URL, $url );
+		curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
+		curl_setopt( $ch, CURLOPT_CONNECTTIMEOUT, $timeout );
 
-		$data = curl_exec($ch);
+		$data = curl_exec( $ch );
 
 		curl_close($ch);
 
