@@ -1,20 +1,26 @@
 <?php
 	class mp3scraper
 	{
-		var $urls = array();
+		var $url;
+		var $regexp;
+		var $directory;
+		var $data;
 
-		public function __construct()
+		public function __construct( $directory = 'random', $url = false )
 		{
+			$this->directory = $directory;
+
+			if ( empty( $url ) )
+				die("Usage: mp3scrape(\$directory = 'random', \$url = false) \n");
+
+			else 
+				$this->url = $url; 
 		}
 
-		public function add( $name = '', $url = '')
+		public function download()
 		{
-			$this->urls[] = array( $name, $url );
-		}
+		  	$this->data = @file_get_contents( $this->url ) or die("Could not access URL:". $this->url );
+		  	echo "Fetching mp3s.. \n";
 
-		public function get ()
-		{
-			return $this->urls;
 		}
-
 	}

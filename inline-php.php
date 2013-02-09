@@ -1,7 +1,6 @@
 <?php
 	foreach( $urls as $url ) {
 	  	$input = @file_get_contents($url[1]) or die("Could not access file:". $url[1]);
-		$regexp = "audio.radiorecord.ru(.*)\.mp3";
 
 		echo "Searching for mp3s: " . $url[1] . "\n\r";
 
