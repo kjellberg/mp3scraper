@@ -8,9 +8,11 @@ class mp3scraper
 	var $regexp = 'href=\"http:\/\/(.*)\.mp3';
 	var $directory = 'downloads/';
 
-	public function __construct( $url = false )
+	public function __construct( $url = false, $clear = false )
 	{
-
+		if ( $clear )
+			$this->clear();
+		
 		$this->inc = 0;
 
 		if (!is_dir('downloads'))
@@ -94,6 +96,11 @@ class mp3scraper
 		$name = end( explode("/", $string ) );
 		$name = urldecode( $name );
 		return $name;
+	}
+
+	public function clear()
+	{
+		system("clear");
 	}
 }
 
