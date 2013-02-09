@@ -19,7 +19,7 @@ $mp3->directory('downloads/');
 $mp3->download();
 ```
 
-### Full script
+### All together..
 ```php
 // Fetch a new URL.
 $mp3 = new mp3scraper('http://www.radiorecord.ru/radio/top100/detail.php?station=4901', true);
