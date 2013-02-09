@@ -1,4 +1,4 @@
-# mp3scraper beta
+# mp3scraper
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum justo libero, venenatis vitae hendrerit at, vehicula vestibulum lectus. Duis mi neque, rutrum sit amet aliquam et, commodo ac dui. Fusce tellus mi, vulputate adipiscing ultrices at, ullamcorper id eros. Donec ultricies volutpat est, vitae bibendum purus sollicitudin eget.
 
