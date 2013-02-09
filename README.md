@@ -1,34 +1,32 @@
- ```                                        _
-                                      /   )
-                                     @| ?\
-       ._-_.    _____________________@| ?\\
-      +|\G/|+  | ____________________@| ?\\\
-      +|\./|+  || O  o o o  =|=  |  =@| ?\\\\
-      +|\./|+  || O  o o o   |  =|=  | -- ====
-       `|H|'   ||______________________||\ \\\
-        |a|    |________________________| \ \\\
-        |H|    ||MM88MM<<<?<<<XHHHHMMMM||  \ \\\
-        |a|    ||M88MM<<<?<<<XHHHMMMMMM||   \ \\\
-        |H|    ||88MM<<<?<<<XHHHMMMMMMM||    \ \\\
-        |a|    ||8MM<<<?<<<XHHHHMMMMMMM||     \ \\\
-        |H|    ||MM<<<?<<<XHHHHMMMMMMMM||      \ \\\
-        |H|    ||M<<<?<<<XHHHHMMMMMMMMM||       \ \\\
-  _-_   |H|   _-_<<<?<<<XHHHHMMMMMMMMMM||        \ \\\
- /   \  |H|  /   \<?<<<XHHHHMMMMMMMMMMM||         \ \\\
- |    \_|a|_/    |?<<<XHHHHMMMMMMMMMMMM||          \ \\\
- \      |H|      /<<<XHHHHMMMMMMMMMMMMR||    =_     \ \\\   _
-  \     |H|     /<<<XHHHHMMMMMMMMMMMRMM||   || |     \ \\\  ||\
-   |    '"'    |<<<XHHHHMMMMMMMMMMMRMM8||   | | \   // \\\\ /  \
-  /     ===     \<XHHHHMMMMMMMMMMMRMM8R||    | |  \-    \\\\   |
- /      ===   !  \HHHHMMMMMMMMMMMRMM8RM||     \ \       \\\\\\ \
-|             | o |HMMMMMMMMMMMMMM988MM||        \\       \\\\  \
-|      +---+ /  o |MMMMMMMMMMMMMM988MM<||          \\      \\\\   \
-\       ___ /  o  /M/MMMMMRMMMRMM88MM<<||           \ \     \\\\     \
- \     |HHH|    l/MMMMMMMRMMMRMM88MM<<<||           | |     \\\\\\     \
-  `-_   \_/   _-MMRMMMMMRMMMRMM88MM<<<?||           | |       \\\\   (O \
-     """"""""' ~~~V~~""~~~~~~~~~~~~~~V~~~           \ \      <o=====o    |
-                                                     \ \              (O |
-                                                       \\                /
-                                                         \\_            /
-                                                            --_______--
-         mp3scraper```
+# mp3scraper - Download mp3 files from webpages.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum justo libero, venenatis vitae hendrerit at, vehicula vestibulum lectus. Duis mi neque, rutrum sit amet aliquam et, commodo ac dui. Fusce tellus mi, vulputate adipiscing ultrices at, ullamcorper id eros. Donec ultricies volutpat est, vitae bibendum purus sollicitudin eget.
+
+## A Few Examples
+
+### Start a new object and fetch a new URL.
+```php
+$mp3 = new mp3scraper('http://www.radiorecord.ru/radio/top100/detail.php?station=4901', true);
+```
+
+### Set download directory with trailing slash. (default: downloads/)
+```php
+$mp3->directory('downloads/');
+```
+
+### Do it..
+```php
+$mp3->download();
+```
+
+### Full script
+```php
+// Fetch a new URL.
+$mp3 = new mp3scraper('http://www.radiorecord.ru/radio/top100/detail.php?station=4901', true);
+
+// Set download directory with trailing slash. (default: downloads/)
+$mp3->directory('downloads/');
+
+// Do it..
+$mp3->download();
+```
