@@ -6,7 +6,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum justo libero
 
 ### Start a new object and fetch a new URL.
 ```php
-$mp3 = new mp3scraper('http://www.radiorecord.ru/radio/top100/detail.php?station=4901', true);
+$mp3 = new mp3scraper('http://history.radiorecord.ru/?station=club&day=today', true);
 ```
 
 ### Set download directory with trailing slash. (default: downloads/)
