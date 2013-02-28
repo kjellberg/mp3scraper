@@ -44,6 +44,11 @@ class mp3scraper
 		return $downloadlinks;
 	}
 
+	public function regexp ( $input )
+	{
+		$this->regexp = $input;
+	}
+
 	public function directory ( $dir )
 	{
 		$this->directory = $dir;
@@ -54,19 +59,24 @@ class mp3scraper
 
 	public function download ()
 	{
+
 		$downloads = $this->getlist();	
 
-		foreach ($downloads as $link):
+		if ( !empty($downloads)):
 
-			$file = $this->directory  . $this->parse_name ($link) ;
+			foreach ($downloads as $link):
 
-			if ( !file_exists( $file ) )
-			{
-				echo "Downloading file: $file \n";
-				file_put_contents( $file , $this->get_file_by_curl( $link ) );
-			}
+				$file = $this->directory  . $this->parse_name ($link) ;
 
-		endforeach;
+				if ( !file_exists( $file ) )
+				{
+					echo "Downloading file: $file \n";
+					file_put_contents( $file , $this->get_file_by_curl( $link ) );
+				}
+
+			endforeach;
+
+		endif;
 
 		if ($this->inc == 0)
 			echo "No new songs to download. \n";
